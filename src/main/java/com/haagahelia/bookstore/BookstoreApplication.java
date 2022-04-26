@@ -34,9 +34,9 @@ public class BookstoreApplication {
 			catRepo.save(new Category("Biography"));
 
 			bookRepo.save(new Book("The Hobbit", "JRR Tolkien", "12345ASW", "1937", "12.99",
-					catRepo.findByName("Fantasy").get(0)));
+					catRepo.findByNameIgnoreCase("Fantasy").get(0)));
 			bookRepo.save(new Book("Priory of the Orange Tree", "Samantha Shannon", "1234545YUY", "2018", "16.00",
-					catRepo.findByName("Fantasy").get(0)));
+					catRepo.findByNameIgnoreCase("Fantasy").get(0)));
 
 			// Create users: admin/admin user/user
 			User user1 = new User("user", "$2a$12$jiH8pWYx0ale0DKo04T8tey8kOgmfmFkpu8T5KHaWLOV8EnN.SQGC", "USER");
